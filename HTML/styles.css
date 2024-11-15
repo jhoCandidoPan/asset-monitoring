@@ -26,6 +26,15 @@ body {
     animation: fadeIn 2s forwards;
     animation-delay: 0.5s;
 }
+.message-love{
+    font-size: 26px;
+    font-weight: bold;
+    color: #D32F2F;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
 
 /* Heart shape styling */
 .heart {
