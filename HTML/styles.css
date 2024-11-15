@@ -1,0 +1,79 @@
+/* General styling for body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Container that holds the message and heart */
+.container {
+    text-align: center;
+}
+
+/* Happy Anniversary message style with animation */
+.message {
+    font-size: 36px;
+    font-weight: bold;
+    color: #D32F2F;
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Heart shape styling */
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #D32F2F;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    animation: beat 1.5s infinite alternate;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #D32F2F;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 50px;
+}
+
+/* Animation for fading in the message */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for beating heart */
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+    100% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+}
